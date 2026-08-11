@@ -1,0 +1,732 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Enterprise HRIS & Mobile Attendance dengan Geolocation - Mitra Pondasi Sistem</title>
+   <meta name="description"
+      content="Studi Kasus: Implementasi Enterprise HRIS & Mobile Attendance Geolocation Odoo oleh Mitra Pondasi Sistem untuk Otomasi Absensi GPS, Cuti, dan Payroll PPh 21/BPJS.">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/icon.jpg">
+
+   <!-- CSS here -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/custom-animation.css">
+   <link rel="stylesheet" href="assets/css/nice-select.css">
+   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/spacing.css">
+   <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body id="body" class="tv-magic-cursor">
+
+   <!-- preloader -->
+   <div id="preloader">
+      <div class="preloader">
+         <span></span>
+         <span></span>
+      </div>
+   </div>
+   <!-- preloader end  -->
+
+   <div id="magic-cursor">
+      <div id="ball"></div>
+   </div>
+
+   <!-- back-to-top-start  -->
+   <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="far fa-angle-double-up"></i>
+   </button>
+   <!-- back-to-top-end  -->
+
+   <!-- search popup start -->
+   <div class="search__popup">
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-12">
+               <div class="search__wrapper">
+                  <div class="search__top d-flex justify-content-between align-items-center">
+                     <div class="search__logo">
+                        <a href="index.html">
+                           <img src="assets/img/logo/logo-white.png" alt="">
+                        </a>
+                     </div>
+                     <div class="search__close">
+                        <button type="button" class="search__close-btn search-close-btn">
+                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                              <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="search__form">
+                     <form action="#">
+                        <div class="search__input">
+                           <input class="search-input-field" type="text" placeholder="Type here to search...">
+                           <span class="search-focus-border"></span>
+                           <button type="submit">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                 <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- search popup end -->
+
+   <!-- tv-offcanvus-area-start -->
+   <div class="tv-offcanvas-area">
+      <div class="itoffcanvas">
+         <div class="itoffcanvas__close-btn">
+            <button class="close-btn"><i class="fal fa-times"></i></button>
+         </div>
+         <div class="itoffcanvas__logo">
+            <a href="index.html">
+               <img src="assets/img/logo/logo-white.png" alt="">
+            </a>
+         </div>
+         <div class="itoffcanvas__text">
+            <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;">Suspendisse interdum consectetur
+               libero id. Fermentum leo vel orci porta non. Euismod viverra nibh
+               cras pulvinar suspen.</p>
+         </div>
+         <div class="tv-menu-mobile d-xl-none"></div>
+         <div class="itoffcanvas__info">
+            <h3 class="offcanva-title">Hubungi Kami</h3>
+            <div class="tv-info-wrapper mb-20 d-flex align-items-center">
+               <div class="itoffcanvas__info-icon">
+                  <a href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                     target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+               </div>
+               <div class="itoffcanvas__info-address">
+                  <span>WhatsApp</span>
+                  <a href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                     target="_blank">+62 895-3305-10893</a>
+               </div>
+            </div>
+            <div class="tv-info-wrapper mb-20 d-flex align-items-center">
+               <div class="itoffcanvas__info-icon">
+                  <a href="#"><i class="fal fa-phone-alt"></i></a>
+               </div>
+               <div class="itoffcanvas__info-address">
+                  <span>Phone</span>
+                  <a href="tel:(00)45611227890">(00) 456 1122 7890</a>
+               </div>
+            </div>
+            <div class="tv-info-wrapper mb-20 d-flex align-items-center">
+               <div class="itoffcanvas__info-icon">
+                  <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+               </div>
+               <div class="itoffcanvas__info-address">
+                  <span>Location</span>
+                  <a href="https://www.google.com/maps/place/Jakarta/@-6.229728,106.789191,12z" target="_blank">Jakarta,
+                     Indonesia</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="body-overlay"></div>
+   <!-- tv-offcanvus-area-end -->
+
+   <header class="tv-header-height">
+      <div class="tv-header-top-area tv-header-top-ptb">
+         <div class="container container-1750">
+            <div class="row align-items-center">
+               <div class="col-xl-8 col-lg-7 col-md-6 col-sm-6">
+                  <div class="tv-header-top-list-box">
+                     <ul>
+                        <li class="d-none d-lg-inline-block">
+                           <span>
+                              <i class="fa-solid fa-phone"></i>
+                              <a href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                                 target="_blank" rel="noopener noreferrer">+62 895-3305-10893</a>
+                           </span>
+                        </li>
+                        <li><span><i class="fa-brands fa-whatsapp"></i><a
+                                 href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                                 target="_blank" rel="noopener noreferrer">WhatsApp: +62 895-3305-10893</a></span></li>
+                        <li class="d-none d-xxl-inline-block">
+                           <span>
+                              <i class="fa-solid fa-location-dot"></i>
+                              <a target="_blank"
+                                 href="https://www.google.com/maps/place/Jakarta/@-6.229728,106.789191,12z"
+                                 target="_blank">Jakarta, Indonesia</a>
+                           </span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-5 col-md-6 col-sm-6 d-none d-sm-block">
+                  <div class="tv-header-top-right d-flex align-items-center justify-content-end">
+
+                     <div class="tv-header-top-social-box">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header-area-start -->
+      <div id="header-sticky" class="tv-header-area header-style-1 tv-header-ptb p-relative">
+
+         <div class="container container-1750">
+            <div class="p-relative">
+               <div class="row align-items-center">
+                  <div class="col-xxl-2 col-xl-2 col-6">
+                     <div class="tv-header-logo">
+                        <a href="index.html"><img src="assets/img/logo/logo-white.png" alt=""></a>
+                     </div>
+                  </div>
+                  <div class=" col-xxl-7 col-xl-7 d-none d-xl-block">
+                     <div class="tv-header-menu tv-header-dropdown">
+                        <nav class="tv-menu-content">
+                           <ul>
+                              <li>
+                                 <a href="index.html">Home</a>
+                              </li>
+                              <li>
+                                 <a href="about.html">Tentang Kami</a>
+                              </li>
+                              <li>
+                                  <a href="service-details.html">Layanan</a>
+                               </li>
+                              <li>
+                                 <a href="project.html">Proyek</a>
+                              </li>
+                              <li>
+                                 <a href="faq.html">Tanya Jawab</a>
+                              </li>
+
+                              <li>
+                                 <a href="contact.html">Kontak</a>
+                              </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="col-xxl-3 col-xl-3 col-6">
+                     <div class="tv-header-right-action d-flex justify-content-end align-items-center">
+                        <button class="tv-header-search search-open-btn d-none d-xxl-block">
+                           <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <a href="contact.html" class="tv-btn-primary d-none d-md-block">
+                           <span class="btn-wrap">
+                              <span class="btn-text1">Mulai Konsultasi</span>
+                              <span class="btn-text2">Mulai Konsultasi</span>
+                           </span>
+                        </a>
+                        <div class="tv-header-bar">
+                           <button class="tv-menu-bar">
+                              <span>
+                                 <i class="fa-solid fa-bars-staggered"></i>
+                              </span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header-area-end -->
+
+   </header>
+
+   <main>
+
+      <!-- breadcrumb-area-start -->
+      <div class="tv-breadcrumb-area tv-breadcrumb-overlay tv-breadcrumb-ptb z-index-1 fix p-relative"
+         data-background="assets/img/breadcrumb/breadcrumb.jpg">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="tv-breadcrumb-content z-index-1 text-center">
+                     <div class="tv-breadcrumb-title-box">
+                        <h3 class="tv-breadcrumb-title tv-spltv-text tv-spltv-in-right">Detail Proyek</h3>
+                     </div>
+                     <div class="tv-breadcrumb-list-wrap">
+                        <div class="tv-breadcrumb-list">
+                           <span><a href="index.html">Home</a></span>
+                           <span class="dvdr">
+                              <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M4.47698 6.00058L0.352151 10.1253L1.53065 11.3038L6.83398 6.00058L1.53065 0.697266L0.352151 1.87577L4.47698 6.00058Z"
+                                    fill="#F5F6F7" />
+                              </svg>
+                           </span>
+                           <i>Project</i>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- breadcrumb-area-end -->
+
+      <div class="tv-blog-area tv-project-details pt-130 pb-130">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="project-thumbnail mb-60">
+                     <img src="assets/img/project/project-7/project-7-large.jpg"
+                        alt="Enterprise HRIS & Mobile Attendance dengan Geolocation">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-8 col-lg-8 col-12">
+                  <div class="tv-blog-list-wrap">
+                     <div class="tv-blog-details">
+                        <div class="tv-blog-details-content">
+                           <div class="tv-project-content">
+                              <h2>Enterprise HRIS & Mobile Attendance dengan Geolocation</h2>
+                              <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;">Penerapan
+                                 solusi Enterprise HRIS berbasis Odoo ERP yang mengintegrasikan modul
+                                 Employees, Time Off, Attendance, dan Payroll untuk mengelola manajemen SDM perusahaan
+                                 berskala besar dan pekerja lapangan secara efisien.</p>
+                              <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;">Dilengkapi
+                                 dengan absensi seluler berbasis GPS (geolocation & face detection), alur
+                                 persetujuan cuti/lembur berjenjang, serta perhitungan slip gaji yang memenuhi standar
+                                 PPh 21 dan potongan BPJS.</p>
+                           </div>
+                           <div class="tv-project-detail-marquee-container">
+               <div class="tv-project-detail-marquee-track">
+                  <!-- Set 1 -->
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Attendance Overview.jpg" class="popup-image" title="Attendance Overview">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Attendance Overview.jpg" alt="Attendance Overview">
+                        <span class="img-caption">Attendance Overview</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Employee Form.jpg" class="popup-image" title="Employee Form">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Employee Form.jpg" alt="Employee Form">
+                        <span class="img-caption">Employee Form</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Employee List.jpg" class="popup-image" title="Employee List">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Employee List.jpg" alt="Employee List">
+                        <span class="img-caption">Employee List</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Management Attendees.jpg" class="popup-image" title="Management Attendees">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Management Attendees.jpg" alt="Management Attendees">
+                        <span class="img-caption">Management Attendees</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Paid Time Off Validation.jpg" class="popup-image" title="Paid Time Off Validation">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Paid Time Off Validation.jpg" alt="Paid Time Off Validation">
+                        <span class="img-caption">Paid Time Off Validation</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Payroll (Payslip).jpg" class="popup-image" title="Payroll (Payslip)">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Payroll (Payslip).jpg" alt="Payroll (Payslip)">
+                        <span class="img-caption">Payroll (Payslip)</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Calendar.jpg" class="popup-image" title="Time Off Calendar">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Calendar.jpg" alt="Time Off Calendar">
+                        <span class="img-caption">Time Off Calendar</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Dashboard.jpg" class="popup-image" title="Time Off Dashboard">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Dashboard.jpg" alt="Time Off Dashboard">
+                        <span class="img-caption">Time Off Dashboard</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Validation.jpg" class="popup-image" title="Time Off Validation">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Validation.jpg" alt="Time Off Validation">
+                        <span class="img-caption">Time Off Validation</span>
+                     </a>
+                  </div>
+                  <!-- Set 2 (Continuous Loop) -->
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Attendance Overview.jpg" class="popup-image" title="Attendance Overview">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Attendance Overview.jpg" alt="Attendance Overview">
+                        <span class="img-caption">Attendance Overview</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Employee Form.jpg" class="popup-image" title="Employee Form">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Employee Form.jpg" alt="Employee Form">
+                        <span class="img-caption">Employee Form</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Employee List.jpg" class="popup-image" title="Employee List">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Employee List.jpg" alt="Employee List">
+                        <span class="img-caption">Employee List</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Management Attendees.jpg" class="popup-image" title="Management Attendees">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Management Attendees.jpg" alt="Management Attendees">
+                        <span class="img-caption">Management Attendees</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Paid Time Off Validation.jpg" class="popup-image" title="Paid Time Off Validation">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Paid Time Off Validation.jpg" alt="Paid Time Off Validation">
+                        <span class="img-caption">Paid Time Off Validation</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Payroll (Payslip).jpg" class="popup-image" title="Payroll (Payslip)">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Payroll (Payslip).jpg" alt="Payroll (Payslip)">
+                        <span class="img-caption">Payroll (Payslip)</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Calendar.jpg" class="popup-image" title="Time Off Calendar">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Calendar.jpg" alt="Time Off Calendar">
+                        <span class="img-caption">Time Off Calendar</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Dashboard.jpg" class="popup-image" title="Time Off Dashboard">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Dashboard.jpg" alt="Time Off Dashboard">
+                        <span class="img-caption">Time Off Dashboard</span>
+                     </a>
+                  </div>
+                  <div class="tv-project-detail-card">
+                     <a href="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Validation.jpg" class="popup-image" title="Time Off Validation">
+                        <img src="assets/img/project-detail/Enterprise HRIS & Attendance/Time Off Validation.jpg" alt="Time Off Validation">
+                        <span class="img-caption">Time Off Validation</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+                           <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;" class="mb-60">
+                              Sistem ini menghilangkan kecurangan absensi lapangan, mempercepat alur
+                              persetujuan manajemen, dan mengotomatiskan seluruh perhitungan penggajian dari data
+                              absensi presisi.</p>
+
+                           <div class="tv-project-content mb-42">
+                              <h2>Tantangan & Solusi</h2>
+                              <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;">
+                                 <strong>Tantangan:</strong> Perusahaan dengan ribuan karyawan dan pekerja lapangan
+                                 membutuhkan sistem absensi berbasis lokasi, manajemen lembur, dan slip gaji yang
+                                 kompleks. Penggunaan metode absen manual atau mesin fingerprint di lokasi terpisah
+                                 rawan manipulasi, persetujuan cuti terhambat birokrasi, dan proses penggajian bulanan
+                                 memakan waktu lama akibat kerumitan perhitungan PPh 21 dan BPJS.</p>
+                              <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;">
+                                 <strong>Solusi:</strong> Mitra Pondasi Sistem mengimplementasikan modul Odoo HR
+                                 (Employees, Time Off, Attendance, Payroll). Kami membangun fitur absensi seluler
+                                 berbasis GPS (geolocation & face detection), alur persetujuan cuti berjenjang, dan
+                                 otomatisasi kalkulasi PPh 21 / BPJS pada slip gaji.</p>
+                           </div>
+
+                           <div class="tv-project-content bottom">
+                              <h2>Hasil Akhir</h2>
+                              <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;">Akurasi
+                                 kehadiran pekerja lapangan meningkat hingga 100% tanpa celah kecurangan. Waktu
+                                 pemrosesan gaji (payroll) berkurang 80% dari 7 hari menjadi 1 hari kerja, serta
+                                 kepuasan karyawan meningkat pesat atas transparansi slip gaji dan kemudahan pengajuan
+                                 cuti digital.</p>
+                           </div>
+
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-12">
+                  <div class="tv-project-sidebar-details">
+                     <h4>Detail Proyek</h4>
+                     <div class="tv-project-list-item">
+                        <ul>
+<li>
+                              <span class="name">Category</span>
+                              <span class="colon">:</span>
+                              <span>Human Capital, Mobile HRIS</span>
+                           </li>
+                           <li>
+                              <span class="name">Date</span>
+                              <span class="colon">:</span>
+                              <span>2025</span>
+                           </li>
+                        </ul>
+
+                     </div>
+
+                     <div class="tv-header-top-social-box">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     </div>
+
+                  </div>
+               </div>
+
+               <!-- Widget Konsultasi WhatsApp Premium Lebar Penuh -->
+               <div class="row mt-40">
+                  <div class="col-12">
+                     <div class="tv-whatsapp-consultation-box mb-30 wow itfadeUp" data-wow-duration="1.6s"
+                        data-wow-delay=".3s"
+                        style="width: 100%; border-radius: 20px; background: #0f172a !important; border: 1px solid rgba(37, 211, 102, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); padding: 40px; position: relative; overflow: hidden;">
+
+                        <!-- Subtle Ambient Background Glow -->
+                        <div
+                           style="position: absolute; top: -50px; right: -50px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(37, 211, 102, 0.2) 0%, rgba(0, 0, 0, 0) 70%); pointer-events: none;">
+                        </div>
+
+                        <div class="position-relative z-index-1">
+                           <div class="row align-items-center gy-4">
+
+                              <!-- Left Content: Heading & Description -->
+                              <div class="col-lg-7 col-12">
+                                 <div class="d-flex align-items-center mb-2">
+                                    <span class="badge px-3 py-2 me-2"
+                                       style="background: rgba(37, 211, 102, 0.15); color: #25d366 !important; border: 1px solid rgba(37, 211, 102, 0.4); border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px;">
+                                       <i class="fa-solid fa-bolt me-1"></i> Respon Cepat &amp; Gratis
+                                    </span>
+                                 </div>
+                                 <h4
+                                    style="font-size: 26px; font-weight: 700; color: #ffffff !important; line-height: 1.3; margin-top: 10px; margin-bottom: 12px;">
+                                    Tertarik Mengimplementasikan Sistem Serupa?
+                                 </h4>
+                                 <p
+                                    style="font-size: 15px; color: #cbd5e1 !important; line-height: 1.6; margin-bottom: 0;">
+                                    Konsultasikan alur kerja dan kustomisasi modul ERP Odoo untuk bisnis Anda langsung
+                                    bersama tim arsitek sistem Mitra Pondasi Sistem.
+                                 </p>
+                              </div>
+
+                              <!-- Right Content: WhatsApp CTA Button & Location Badge -->
+                              <div class="col-lg-5 col-12 text-lg-end text-start">
+                                 <div class="d-inline-flex flex-column align-items-lg-end align-items-start gap-3">
+
+                                    <!-- High-Impact WhatsApp Button -->
+                                    <a href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                                       target="_blank" rel="noopener noreferrer"
+                                       class="btn d-inline-flex align-items-center justify-content-center px-4 py-3"
+                                       style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important; color: #ffffff !important; font-weight: 700; font-size: 16px; border-radius: 12px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); text-decoration: none; border: none; transition: all 0.3s ease;">
+                                       <div
+                                          style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.25); display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                          <i class="fa-brands fa-whatsapp"
+                                             style="font-size: 20px; color: #ffffff !important;"></i>
+                                       </div>
+                                       <span style="color: #ffffff !important;">Chat WhatsApp Sekarang</span>
+                                    </a>
+
+                                    <!-- Location Info -->
+                                    <div class="d-flex align-items-center"
+                                       style="font-size: 14px; color: #94a3b8 !important;">
+                                       <i class="fa-solid fa-location-dot me-2"
+                                          style="color: #ff5722 !important; font-size: 15px;"></i>
+                                       <span style="color: #94a3b8 !important;">Kantor Pusat: <strong
+                                             style="color: #f1f5f9 !important;">Jakarta, Indonesia</strong></span>
+                                    </div>
+
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+   </main>
+
+
+   <footer>
+
+      <!-- footer-area-start -->
+      <div class="tv-footer-wrap footer-bg z-index-1 pt-130">
+         <div class="tv-footer-top-area">
+            <div class="container">
+               <div class="tv-footer-top-area-form">
+                  <div class="row align-items-center">
+                     <div class="col-xl-5 col-12">
+                        <div class="tv-footer-top-heading">
+                           <h2 class="tv-spltv-text tv-spltv-in-right">Konsultasi Langsung via WhatsApp</h2>
+                        </div>
+                     </div>
+                     <div class="col-xl-7 col-12 text-xl-end">
+                        <div class="tv-footer-top-form">
+                           <a href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                              target="_blank" rel="noopener noreferrer"
+                              class="tv-btn-primary p-relative d-inline-block">
+                              <span class="btn-wrap">
+                                 <span class="btn-text1"><i class="fa-brands fa-whatsapp me-2"></i>Chat WhatsApp
+                                    Sekarang</span>
+                                 <span class="btn-text2"><i class="fa-brands fa-whatsapp me-2"></i>Chat WhatsApp
+                                    Sekarang</span>
+                              </span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <div class="tv-footer-area mb-65">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-50">
+                     <div class="tv-footer-widget tv-footer-col-1">
+                        <div class="tv-footer-widget-logo mb-30">
+                           <a href="index.html"><img src="assets/img/logo/logo-white2.png" alt=""></a>
+                        </div>
+                        <div class="tv-footer-widget-text">
+                           <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;">Kami adalah rekan
+                              strategis Anda dalam membangun arsitektur sistem ERP/Odoo yang kokoh,
+                              efisien, dan skalabel demi masa depan bisnis yang gemilang.</p>
+                        </div>
+                        <div class="tv-footer-widget-contact-info">
+                           <ul>
+                              <li>
+                                 <a href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                                    target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i>+62
+                                    895-3305-10893</a>
+                              </li>
+                              <li>
+                                 <a href="https://api.whatsapp.com/send?phone=62895330510893&text=Halo%20Mitra%20Pondasi%20Sistem%2C%20saya%20ingin%20berkonsultasi%20terkait%20kebutuhan%20sistem%20perusahaan%20saya%20%F0%9F%98%80"
+                                    target="_blank" rel="noopener noreferrer"><i
+                                       class="fa-brands fa-whatsapp"></i>WhatsApp: +62 895-3305-10893</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
+                     <div class="tv-footer-widget tv-footer-col-2">
+                        <h4 class="tv-footer-widget-title">Tautan Penting</h4>
+                        <div class="tv-footer-widget-menu">
+                           <ul>
+                              <li><a href="about.html">Tentang Kami</a></li>
+                              <li><a href="contact.html">Hubungi Kami</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 mb-50">
+                     <div class="tv-footer-widget tv-footer-col-3 d-flex justify-content-xl-end">
+                        <div>
+                           <h4 class="tv-footer-widget-title">Layanan</h4>
+                           <div class="tv-footer-widget-menu">
+                              <ul>
+                                 <li><a href="service-details.html">Penyederhanaan Alur Kerja</a></li>
+                                 <li><a href="service-details.html">Manajemen Penjualan & CRM</a></li>
+                                 <li><a href="service-details.html">Kontrol Stok & Rantai Pasok</a></li>
+                                 <li><a href="service-details.html">Dashboard & Laporan Terpadu</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
+                     <div class="tv-footer-widget tv-footer-col-4 d-flex justify-content-xl-end">
+                        <div>
+                           <h4 class="tv-footer-widget-title">Information</h4>
+                           <div class="tv-footer-widget-menu">
+                              <ul>
+                                 <li><a href="contact.html">Alur Kerja</a></li>
+                                 <li><a href="contact.html">Kebijakan Privasi</a></li>
+                                 <li><a href="contact.html">Syarat & Ketentuan</a></li>
+                                 <li><a href="faq.html"> Tanya Jawab</a></li>
+                              </ul>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="tv-copyright-area ">
+            <div class="container">
+               <div class="tv-copyright-border">
+                  <div class="row align-items-center">
+                     <div class="col-lg-6">
+                        <div class="tv-copyright-left text-center text-lg-start">
+                           <p style="text-align: justify; text-justify: inter-word; line-height: 1.8;" class="mb-0">©
+                              2026 <a href="#">Mitra Pondasi Sistem</a>. Hak Cipta Dilindungi
+                              Undang-Undang.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 text-end">
+                        <div class="tv-footer-widget-social">
+                           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                           <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+      </div>
+      <!-- footer-area-end -->
+
+   </footer>
+
+
+   <!-- JS here -->
+   <script src="assets/js/jquery.js"></script>
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/slick.min.js"></script>
+   <script src="assets/js/magnific-popup.js"></script>
+   <script src="assets/js/purecounter.js"></script>
+   <script src="assets/js/wow.js"></script>
+   <script src="assets/js/nice-select.js"></script>
+   <script src="assets/js/range-slider.js"></script>
+   <script src="assets/js/swiper-bundle.js"></script>
+   <script src="assets/js/isotope-pkgd.js"></script>
+   <script src="assets/js/imagesloaded-pkgd.js"></script>
+   <script src="assets/js/main-tv.js"></script>
+   <script src="assets/js/custom-gsap.js"></script>
+   <script src="assets/js/slider.js"></script>
+   <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
